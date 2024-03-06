@@ -1,0 +1,7 @@
+Script lectura pdf
+import pdfplumber
+PDF_PATH = 'ruta'
+with pdfplumber.open(PDF_PATH) as pdf:
+    for page in pdf.pages:
+        text = page.extract_text()
+        print(text)
